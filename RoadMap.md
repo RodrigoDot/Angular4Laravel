@@ -2,7 +2,6 @@
 
 ## Requerimentos
 
-* Node
 * Npm
 * Angular4
 
@@ -28,7 +27,9 @@ npm start
 Basta acessar o endeco do localhost indicado e se maravilhar com a facilidade.
 
 
+## Instalando o Materialize CSS
 
+Materializee um tema criado pela Google.
 
 
 
