@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import '../../public/css/styles.css';
+import 'materialize-css/dist/css/materialize.min.css';
 
 @Component({
   selector: 'my-app',
