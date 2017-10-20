@@ -16,7 +16,8 @@ npm install -g webpack-dev-server
 Com isso voce tera o webpack-dev-server instalado globalmente na sua maquina.
 Agora
 ```js
-git clone git@github.com:erikfig/angular2-webpack-skeleton.git
+git clone https://github.com/erikfig/angular2-webpack-skeleton.git
 cd angular2-webpack-skeleton
 npm install
 ```
+Agora voce tem o esqueleto da aplicacao basica Angular4.
