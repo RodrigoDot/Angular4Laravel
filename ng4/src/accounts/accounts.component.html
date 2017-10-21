@@ -1,6 +1,6 @@
 <div class="row">
   <div class="content-header">
-    <h1>Contas<small>Gerenciamento</small></h1>
+    <h1>Contas <small>Gerenciamento</small></h1>
     <div class="gray-text">
       <small>
         <a href="">iFinance</a>
@@ -10,23 +10,39 @@
   </div>
 
   <div class="card col s12">
-    <table class="highlight">
+    <table class="highlight responsive-table centered">
       <thead>
         <tr>
-          <th>Contas</th>
+          <th>Titulo</th>
+          <th>Conta</th>
+          <th>Agencia</th>
+          <th>Balanco</th>
+          <th>Opcoes</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor="let account of accounts">
           <td>
-            Titulo
-            <small>agencia: 000 | conta: 0000 | cod banco: 000 </small>
+            <small>{{account.title}} </small>
+          </td>
+          <td>
+            <small>{{account.agency}} </small>
+          </td>
+          <td>
+            <small>{{account.account_number}} </small>
+          </td>
+          <td>
+            <small>R$ {{account.balance}} </small>
+          </td>
+          <td>
+            <a [routerLink]="['/accounts/' + account.id]" class="btn waves-effect" type="button" name="button">
+              <i class="material-icons left">info</i>
+              Ver
+            </a>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-
 </div>
-
 <paginate></paginate>

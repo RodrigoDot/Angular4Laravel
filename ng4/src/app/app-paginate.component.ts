@@ -3,13 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'paginate',
   template: `
-  <div class="center-align">
+  <div class="row col s12 center-align">
     <ul class="pagination">
-      <li class="active">1</li>
-      <li class="waves-effect">2</li>
-      <li class="waves-effect">3</li>
-      <li class="waves-effect">4</li>
-      <li class="waves-effect">5</li>
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
     </ul>
     <p>Encontrados 100 registros, exibindo pagina 1 de 10</p>
   </div>

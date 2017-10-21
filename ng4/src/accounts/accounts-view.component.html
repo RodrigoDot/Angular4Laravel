@@ -1,1 +1,52 @@
-<h1>VIEW</h1>
+<div class="row">
+  <div class="content-header">
+    <h1>Contas <small>Gerenciamento</small></h1>
+    <div class="gray-text">
+      <small>
+        <a href="">iFinance</a>
+        <span>Edicao de dados</span>
+      </small>
+    </div>
+  </div>
+
+  <div class="card col s12">
+    <table class="highlight responsive-table centered">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Conta</th>
+          <th>Agencia</th>
+          <th>Balanco</th>
+          <th>Opcoes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <small>tite </small>
+          </td>
+          <td>
+            <small>agency </small>
+          </td>
+          <td>
+            <small>account_number </small>
+          </td>
+          <td>
+            <small>R$ account.balance </small>
+          </td>
+          <td>
+            <a [routerLink]="['/accounts/' + account.id + '/edit']" class="btn waves-effect" type="button" name="button">
+              <i class="material-icons left">edit</i>
+              Edit
+            </a>
+            <a [routerLink]="['/accounts/' + account.id + '/delete']" class="btn waves-effect" type="button" name="button">
+              <i class="material-icons left">delete</i>
+              Delete
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<paginate></paginate>
