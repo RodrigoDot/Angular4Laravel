@@ -34,5 +34,21 @@ export class AppHttpService {
     })
   }
 
+  view(id: number) {
+    return this.http.get(this.url + '/' + id, {headers: this.header})
+    .toPromise()
+    .then((res) => {
+      return res.json() || {};
+    })
+  }
+
+  edit(id: number) {
+    return this.http.put(this.url + '/' + id + '/edit', {headers: this.header})
+    .toPromise()
+    .then((res) => {
+      return res.json() || {};
+    })
+  }
+
 
 }

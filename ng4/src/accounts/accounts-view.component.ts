@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppHttpService } from '../app/app-http.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component ({
   templateUrl : './accounts-view.component.html',
@@ -8,19 +9,27 @@ import { AppHttpService } from '../app/app-http.service';
 
 export class AccountsViewComponent {
 
-  public accounts: Array<Object>;
-
-  constructor(private httpService: AppHttpService) {}
-
-  ngOnInit() {
-    this.list();
+  public account: Object = {
+    bank: {}
   }
 
-  list() {
+  constructor(
+    private httpService: AppHttpService,
+    private route: ActivatedRoute,
+  ) {}
+
+  ngOnInit() {
+    this.route.params
+      .subscribe((params: any) => {
+        this.view(params.id);
+    })
+  }
+
+  view(id: number) {
     this.httpService.builder('accounts')
-    .list()
+    .view(id)
     .then((res) => {
-      return this.accounts = res.data;
+      this.account = res;
     })
   }
 
