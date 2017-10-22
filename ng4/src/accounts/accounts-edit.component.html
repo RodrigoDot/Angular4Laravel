@@ -14,29 +14,38 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="titulo" type="text" {{account.title}} >
-          <label for="titulo">Titulo</label>
+          <input name="titulo" id="titulo" type="text" [(ngModel)]="account.title" >
+          <label for="titulo" class="active">Titulo</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="account" type="text" {{account.account_number}} >
-          <label for="account">Conta</label>
+          <select name="bank_id" [(ngModel)]="account.bank.id" class="browser-default">
+            <option *ngFor="let bank of banks" [value]="bank.id">{{bank.title}}</option>
+          </select>
+          <label>Banks</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="agency" type="text" {{account.agency}} >
-          <label for="agency">Agencia</label>
+          <input name="account_number" id="account" type="text" [(ngModel)]="account.account_number" >
+          <label for="account_number" class="active">Conta</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="balance" type="text" {{account.account_balance}} >
-          <label for="balance">Saldo</label>
+          <input name="agency" id="agency" type="text" [(ngModel)]="account.agency" >
+          <label for="agency" class="active">Agencia</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input name="balance" id="balance" type="text" [(ngModel)]="account.balance" >
+          <label for="balance" class="active">Saldo</label>
         </div>
       </div>
 

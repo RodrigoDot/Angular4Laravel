@@ -50,5 +50,13 @@ export class AppHttpService {
     })
   }
 
+  delete(id: number) {
+    return this.http.put(this.url + '/' + id + '/delete', {headers: this.header})
+    .toPromise()
+    .then((res) => {
+      return res.json() || {};
+    })
+  }
+
 
 }

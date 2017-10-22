@@ -10,42 +10,46 @@
   </div>
 
   <div class="card col s12 center">
-    <form class="col s12">
+      <form class="col s12">
+        <div class="card-content">
 
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="titulo" type="text" account.title >
-          <label for="titulo">Titulo</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="titulo" type="text" ngModel"{{account.title}}" >
+            <label for="titulo">Titulo</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="account" type="text" account.title >
+            <label for="account">Conta</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="agency" type="text" account.title >
+            <label for="agency">Agencia</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="balance" type="text" account.title >
+            <label for="balance">Saldo</label>
+          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="account" type="text" account.title >
-          <label for="account">Conta</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="agency" type="text" account.title >
-          <label for="agency">Agencia</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="balance" type="text" account.title >
-          <label for="balance">Saldo</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
+      <div class="card-action">
+        <div class="row">
+          <div class="input-field col s12">
             <button [routerLink]="['']" class="btn waves-effect" type="submit" name="send">
               <i class="material-icons left">send</i>
               Send
             </button>
+          </div>
         </div>
       </div>
 

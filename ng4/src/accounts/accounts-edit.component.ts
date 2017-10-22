@@ -13,6 +13,8 @@ export class AccountsEditComponent {
     bank: {}
   }
 
+  public banks: Array<Object>;
+
   constructor(
     private httpService: AppHttpService,
     private route: ActivatedRoute,
@@ -23,6 +25,7 @@ export class AccountsEditComponent {
       .subscribe((params: any) => {
         this.edit(params.id);
     })
+    this.bankList();
   }
 
   edit(id: number) {
@@ -32,4 +35,13 @@ export class AccountsEditComponent {
       this.account = res;
     })
   }
+
+  bankList() {
+    this.httpService.builder('banks')
+    .list()
+    .then((res) => {
+      this.banks = res.data;
+    })
+  }
+
 }

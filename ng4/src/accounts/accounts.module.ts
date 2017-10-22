@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppPaginateComponent } from '../app/app-paginate.component';
 import { AppHttpService } from '../app/app-http.service';
+import { FormsModule } from '@angular/forms'; //para utilizar o bind [()]
 
 import { AccountsComponent } from './accounts.component';
 import { AccountsViewComponent } from './accounts-view.component';
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
   imports : [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   declarations : [
     AccountsComponent,
