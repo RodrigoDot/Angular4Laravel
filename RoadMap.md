@@ -2,6 +2,7 @@
 
 ## Requerimentos
 
+* Node
 * Npm
 * Angular4
 
@@ -20,40 +21,3 @@ cd angular2-webpack-skeleton
 npm install
 ```
 Agora voce tem o esqueleto da aplicacao basica Angular4.
-Para iniciar o servidor e testar se tudo esta realmente funcionando.
-```js
-npm start
-```
-Basta acessar o endeco do localhost indicado e se maravilhar com a facilidade.
-
-
-## Instalando o Materialize CSS
-
-Materializee um framnework css.
-```js
-npm install --save materialize-css
-```
-
-
-## Configurando o Materialize
-
-Va ate ``/src/app.component.ts`` e adicione a seguinte linha de importacao.
-```js
-import 'materialize-css/dist/css/materialize.min.css';
-```
-Agora voce ja tem o tema adicionado a sua aplicacao.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-x
